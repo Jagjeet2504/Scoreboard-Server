@@ -44,7 +44,7 @@ app.use("/api/admin", authenticateToken, adminRoutes);
 // Socket.IO Configuration
 const io = socketIo(server, {
   cors: {
-    origin: "https://hilarious-boba-61404f.netlify.app/dashboard",
+    origin: "https://hilarious-boba-61404f.netlify.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
