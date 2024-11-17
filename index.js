@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://hilarious-boba-61404f.netlify.app/dashboard",
+    origin: "https://hilarious-boba-61404f.netlify.app",
     credentials: true,
   })
 );
