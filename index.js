@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://hilarious-boba-61404f.netlify.app/dashboard",
     credentials: true,
   })
 );
@@ -44,7 +44,7 @@ app.use("/api/admin", authenticateToken, adminRoutes);
 // Socket.IO Configuration
 const io = socketIo(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://hilarious-boba-61404f.netlify.app/dashboard",
     methods: ["GET", "POST"],
     credentials: true,
   },
