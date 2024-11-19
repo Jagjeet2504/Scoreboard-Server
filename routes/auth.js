@@ -104,7 +104,7 @@ router.post("/logout", (req, res) => {
 // Get current user
 router.get("/me", authenticateToken, async (req, res) => {
   try {
-    const user = await User.findById(req.user.userId).select("-password");
+    const user = await User.findById(req.user.userId).select("-password"); //return all the fields except password
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
